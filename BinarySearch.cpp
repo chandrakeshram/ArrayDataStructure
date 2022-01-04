@@ -21,10 +21,10 @@ int main(){
     cin>>key;
     int s=0;
     int e=n;
-    int mid=(s+e)/2;
-    while(s<=e){
-        
-        if(arr[mid]==key){
+    int mid=(s+e)/2;                                            //We create start end and mid for binary search 
+    while(s<=e){                                                //and compare key element with mid of the array
+                                                                //key is greater than we update start by start =mid+1 else if
+        if(arr[mid]==key){                                      //key is smaller we update end by end =mid-1
             cout<<"Search is successful . Key is found"<<endl;
             break;
         }
@@ -42,7 +42,11 @@ int main(){
         cout<<"Search is unsuccessful . Key is not found"<<endl;
     }
     
-    
+/*NOTE:
+Time complexity of Binary Search is much better than linear search .
+Time complexity of Binary Search is O(log(N)) while Time Complexity
+of Linear Search is O(N)
+Binary search is very fast as compared to linear search*/    
     
     
     
